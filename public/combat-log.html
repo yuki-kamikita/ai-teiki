@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>戦闘ログ詳細 | ムク</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-orbit" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <header class="hero">
+        <nav class="nav" id="site-header"></nav>
+        <div class="hero-inner">
+            <div class="eyebrow">戦闘ログ</div>
+            <h1>戦闘ログ詳細</h1>
+            <p class="lead">
+                更新で行われた戦闘の内容を、<br>
+                ターンごとの行動で確認できます。
+            </p>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="panel">
+            <h2 id="battle-title">ムクの群れ vs 灰の群れ</h2>
+
+            <div class="turn-block" data-turn="1">
+                <div class="turn-title">Turn 1</div>
+                <div class="result-row">
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="ally">味方 200 / 200 毒</div>
+                        <div class="hp-label" data-mp="ally">MP 100 / 100</div>
+                        <div class="hp-bar"><span class="ally" style="width: 100%;"></span></div>
+                    </div>
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="enemy">敵 200 / 200 眠り</div>
+                        <div class="hp-label" data-mp="enemy">MP 80 / 80</div>
+                        <div class="hp-bar"><span class="enemy" style="width: 100%;"></span></div>
+                    </div>
+                </div>
+                <div class="action-stream" data-actions></div>
+            </div>
+
+            <div class="turn-block" data-turn="2">
+                <div class="turn-title">Turn 2</div>
+                <div class="result-row">
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="ally">味方 170 / 200 毒</div>
+                        <div class="hp-label" data-mp="ally">MP 90 / 100</div>
+                        <div class="hp-bar"><span class="ally" style="width: 85%;"></span></div>
+                    </div>
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="enemy">敵 115 / 200 眠り</div>
+                        <div class="hp-label" data-mp="enemy">MP 60 / 80</div>
+                        <div class="hp-bar"><span class="enemy" style="width: 58%;"></span></div>
+                    </div>
+                </div>
+                <div class="action-stream" data-actions></div>
+            </div>
+
+            <div class="turn-block" data-turn="3">
+                <div class="turn-title">Turn 3</div>
+                <div class="result-row">
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="ally">味方 190 / 200 毒</div>
+                        <div class="hp-label" data-mp="ally">MP 70 / 100</div>
+                        <div class="hp-bar"><span class="ally" style="width: 95%;"></span></div>
+                    </div>
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="enemy">敵 55 / 200 眠り解除</div>
+                        <div class="hp-label" data-mp="enemy">MP 40 / 80</div>
+                        <div class="hp-bar"><span class="enemy" style="width: 28%;"></span></div>
+                    </div>
+                </div>
+                <div class="action-stream" data-actions></div>
+            </div>
+
+            <div class="turn-block" data-turn="4">
+                <div class="turn-title">Turn 4</div>
+                <div class="result-row">
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="ally">味方 0 / 0</div>
+                        <div class="hp-bar"><span class="ally" style="width: 0%;"></span></div>
+                    </div>
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="enemy">敵 0 / 0</div>
+                        <div class="hp-bar"><span class="enemy" style="width: 0%;"></span></div>
+                    </div>
+                </div>
+                <div class="action-stream" data-actions></div>
+            </div>
+
+            <div class="turn-block" data-turn="5">
+                <div class="turn-title">Turn 5</div>
+                <div class="result-row">
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="ally">味方 0 / 0</div>
+                        <div class="hp-bar"><span class="ally" style="width: 0%;"></span></div>
+                    </div>
+                    <div class="hp-block">
+                        <div class="hp-label" data-hp="enemy">敵 0 / 0</div>
+                        <div class="hp-bar"><span class="enemy" style="width: 0%;"></span></div>
+                    </div>
+                </div>
+                <div class="action-stream" data-actions></div>
+            </div>
+
+            <div class="turn-block">
+                <div class="turn-title">戦闘結果</div>
+                <div class="action-stream">
+                    <div class="action-line ally">
+                        <div class="action-meta">勝敗</div>
+                        <p class="action-text" id="battle-result">勝利</p>
+                    </div>
+                    <div class="action-line">
+                        <div class="action-meta">獲得報酬</div>
+                        <p class="action-text" id="battle-reward">装備: 1 / スキル: 0 / 称号: 1 / 実績: 0</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="site-footer"></footer>
+    <script src="shared.js"></script>
+    <script src="combat-log.js?v=3"></script>
+</body>
+</html>

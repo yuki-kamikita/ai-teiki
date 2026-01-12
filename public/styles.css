@@ -161,6 +161,10 @@ h1 {
     backdrop-filter: blur(10px);
 }
 
+.panel + .panel {
+    margin-top: 28px;
+}
+
 .panel h2 {
     margin-top: 0;
     font-size: 22px;
@@ -213,6 +217,130 @@ h1 {
 .footer-links {
     display: flex;
     gap: 12px;
+}
+
+.result-hero {
+    background: linear-gradient(120deg, rgba(15, 15, 19, 0.9), rgba(15, 15, 19, 0.5)),
+                radial-gradient(800px 400px at 30% 10%, rgba(214, 168, 106, 0.25), transparent 60%),
+                radial-gradient(800px 400px at 80% 20%, rgba(109, 107, 134, 0.2), transparent 60%);
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 18px 40px var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.result-row + .action-stream {
+    margin-top: 16px;
+}
+
+.hp-block {
+    min-width: 180px;
+}
+
+.hp-label {
+    font-size: 14px;
+    color: var(--ink-muted);
+    margin-bottom: 6px;
+}
+
+.hp-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.hp-bar span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #f48a6d, #d64e4e);
+}
+
+.hp-bar span.ally {
+    background: linear-gradient(90deg, #9fd4c6, #4fa59a);
+}
+
+.hp-bar span.enemy {
+    background: linear-gradient(90deg, #f48a6d, #d64e4e);
+}
+
+.turn-block {
+    margin-top: 36px;
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.turn-title {
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0.2em;
+    margin: 8px 0 24px;
+}
+
+.turn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.action-card {
+    background: rgba(20, 21, 28, 0.9);
+    border-radius: 18px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.action-stream {
+    display: grid;
+    gap: 12px;
+}
+
+.action-line {
+    background: rgba(20, 21, 28, 0.9);
+    border-radius: 16px;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.action-line.ally {
+    border-color: rgba(159, 212, 198, 0.4);
+}
+
+.action-line.enemy {
+    border-color: rgba(244, 138, 109, 0.4);
+}
+
+.action-meta {
+    font-size: 12px;
+    color: var(--ink-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.action-text {
+    margin: 6px 0 0;
+    line-height: 1.7;
+}
+
+.action-title {
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.action-list {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--ink-muted);
+    line-height: 1.7;
 }
 
 @keyframes drift {
