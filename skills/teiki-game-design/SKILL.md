@@ -41,6 +41,8 @@ description: 定期更新RPGの設計とドキュメント化を行うスキル�
 - ソーシャル要素
 - リスクと未決事項
 
+初級（未経験）の場合は、専門用語を避け、必ずかみ砕いて説明する。
+
 ## 参照
 
 ジャンル定義と用語は `skills/teiki-game-design/references/genre.md` を参照する。
